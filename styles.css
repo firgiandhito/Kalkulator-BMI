@@ -1,0 +1,22 @@
+.card {
+    background-color: lightgray;
+    padding: 1em 2em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+}
+
+.input-text {
+    width: 90%;
+}
+
+i {
+    width: 2%;
+    border: 1px solid lightgray;
+}
