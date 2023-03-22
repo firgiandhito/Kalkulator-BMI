@@ -1,9 +1,10 @@
-@media screen only and {
-    
+body {
+    font-family: helvetica, sans-serif;
 }
 
-body {
-    font: 1em sans-serif;
+/*responsive*/
+@media only screen and (max-width: 600px){
+    
 }
 
 .calculator {
@@ -37,4 +38,8 @@ label {
 i {
     width: 2%;
     border: 1px solid lightgray;
+}
+
+.alert {
+    display: none;
 }

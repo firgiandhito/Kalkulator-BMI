@@ -14,6 +14,7 @@
         crossorigin="anonymous"></script>
     </head>
     <body>
+        <!--form isian-->
         <main id="calculator">
             <div class="paragraph">
                 <h2>Kalkulator BMI</h2>
@@ -24,6 +25,7 @@
             </div>
             <div class="card">
                 <form class="form">
+                    <!--jenis kelamin-->
                     <div class="form-group-jk">
                         <strong>Jenis Kelamin</strong>
                         <input type="radio" name="jenis-kelamin"
@@ -33,27 +35,46 @@
                         value="p" required="true" />
                         <label for="wanita">Wanita</label>
                     </div>
+                    <!--berat badan-->
                     <div class="form-group">
                         <label for="berat-badan">Berat badan (Kg)
                         </label>
                         <div class="icon-input">
                             <i class="fa-solid fa-pen"></i>
                             <input name="berat-badan" type="text" 
-                            class="input-text" required="true" />
+                            id="weight" class="input-text" 
+                            required="true" />
                         </div>
                     </div>
+                    <!--tinggi badan-->
+                    <div class="form-group">
+                        <label for="tinggi-badan">Tinggi badan (Cm)
+                        </label>
+                        <div class="icon-input">
+                            <i class="fa-solid fa-pen"></i>
+                            <input name="tinggi-badan" type="text" 
+                            id="height" class="input-text" 
+                            required="true" />
+                        </div>
+                    </div>
+                    <!--usia-->
                     <div class="form-group">
                         <label for="usia">Usia (Tahun)</label>
                         <div class="icon-input">
                             <i class="fa-solid fa-pen"></i>
                             <input type="text" name="usia" 
-                            class="input-text" required="true" />
+                            id="usia" class="input-text" 
+                            required="true" />
                         </div>
                     </div>
                     <div class="button-group">
                         <button id="hitung" type="submit" class="button"
                         onclick="calculate()">Hitung BMI</button>
                         <button id="reset" class="reset">Reset</button>
+                    </div>
+                    <!-- validasi -->
+                    <div id="alert">
+                        <p id="alert-text">kandj</p>
                     </div>
                 </form>
             </div>
@@ -77,6 +98,7 @@
             </div>
             
         </main>
+        <!--laman hasil-->
         <span class="result">
             <h2>Hasil</h2>
             <div class="card">
