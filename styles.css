@@ -2,18 +2,36 @@ body {
     font-family: helvetica, sans-serif;
 }
 
+#flex {
+    display: flex;
+    flex-direction: row;
+}
+
 /*responsive*/
 @media only screen and (max-width: 600px){
     
 }
 
-.calculator {
+main {
     height: 100%;
-    position: fixed;
+    min-width: 350px;
+    max-width: 600px;
     z-index: 1;
     top: 0;
     left: 0;
-    padding-top: 20px;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+span {
+    height: 100%;
+    min-width: 350px;
+    max-width: 600px;
+    z-index: 1;
+    top: 0;
+    left: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
     overflow-y: auto;
 }
 
@@ -22,12 +40,14 @@ body {
     padding: 1em 2em;
 }
 
-.form-group {
-    flex-direction: column;
+form div {
+    padding: auto 20px;
 }
 
 label {
     font-weight: bold;
+    padding: auto 10px;
+    margin-top: 15px;
 }
 
 .input-text {
@@ -35,8 +55,12 @@ label {
 }
 
 i {
-    width: 2%;
+    width: 3%;
     border: 1px solid lightgray;
+}
+
+button {
+    margin-top: 20px;
 }
 
 .alert {

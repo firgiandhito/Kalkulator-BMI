@@ -14,96 +14,97 @@
         crossorigin="anonymous"></script>
     </head>
     <body>
-        <!--form isian-->
-        <main id="calculator">
-            <div class="paragraph">
-                <h2>Kalkulator BMI</h2>
-                <p>Berat badan ideal adalah impian semua orang. 
-                Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, 
-                berat badan ideal juga menandakan kondisi tubuh yang sehat. 
-                Bagaimana denganmu? Yuk, hitung sekarang di BMI Kalkulator.</p>
-            </div>
-            <div class="card">
-                <form class="form">
-                    <!--jenis kelamin-->
-                    <div class="form-group-jk">
-                        <strong>Jenis Kelamin</strong>
-                        <input type="radio" name="jenis-kelamin"
-                        value="l" required="true" />
-                        <label for="pria">Pria</label>
-                        <input type="radio" name="jenis-kelamin"
-                        value="p" required="true" />
-                        <label for="wanita">Wanita</label>
-                    </div>
-                    <!--berat badan-->
-                    <div class="form-group">
-                        <label for="berat-badan">Berat badan (Kg)
-                        </label>
-                        <div class="icon-input">
-                            <i class="fa-solid fa-pen"></i>
-                            <input name="berat-badan" type="text" 
-                            id="weight" class="input-text" 
-                            required="true" />
+        <div id="flex">
+            <!--form isian-->
+            <main id="calculator">
+                <div class="paragraph">
+                    <h2>Kalkulator BMI</h2>
+                    <p>Berat badan ideal adalah impian semua orang. 
+                    Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, 
+                    berat badan ideal juga menandakan kondisi tubuh yang sehat. 
+                    Bagaimana denganmu? Yuk, hitung sekarang di BMI Kalkulator.</p>
+                </div>
+                <div class="card">
+                    <form class="form">
+                        <!--jenis kelamin-->
+                        <div class="form-group-jk">
+                            <strong>Jenis Kelamin</strong>
+                            <input type="radio" name="jenis-kelamin"
+                            value="l" required="true" />
+                            <label for="pria">Pria</label>
+                            <input type="radio" name="jenis-kelamin"
+                            value="p" required="true" />
+                            <label for="wanita">Wanita</label>
                         </div>
-                    </div>
-                    <!--tinggi badan-->
-                    <div class="form-group">
-                        <label for="tinggi-badan">Tinggi badan (Cm)
-                        </label>
-                        <div class="icon-input">
-                            <i class="fa-solid fa-pen"></i>
-                            <input name="tinggi-badan" type="text" 
-                            id="height" class="input-text" 
-                            required="true" />
+                        <!--berat badan-->
+                        <div class="form-group">
+                            <label for="berat-badan">Berat badan (Kg)
+                            </label>
+                            <div class="icon-input">
+                                <i class="fa-solid fa-pen"></i>
+                                <input name="berat-badan" type="text" 
+                                id="weight" class="input-text" 
+                                required="true" />
+                            </div>
                         </div>
-                    </div>
-                    <!--usia-->
-                    <div class="form-group">
-                        <label for="usia">Usia (Tahun)</label>
-                        <div class="icon-input">
-                            <i class="fa-solid fa-pen"></i>
-                            <input type="text" name="usia" 
-                            id="usia" class="input-text" 
-                            required="true" />
+                        <!--tinggi badan-->
+                        <div class="form-group">
+                            <label for="tinggi-badan">Tinggi badan (Cm)
+                            </label>
+                            <div class="icon-input">
+                                <i class="fa-solid fa-pen"></i>
+                                <input name="tinggi-badan" type="text" 
+                                id="height" class="input-text" 
+                                required="true" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="button-group">
-                        <button id="hitung" type="submit" class="button"
-                        onclick="calculate()">Hitung BMI</button>
-                        <button id="reset" class="reset">Reset</button>
-                    </div>
-                    <!-- validasi -->
-                    <div id="alert">
-                        <p id="alert-text">kandj</p>
-                    </div>
-                </form>
-            </div>
-            <div class="paragraph">
-                <h2>Apa itu Kalkulator BMI? </h2>
-                <p>Kalkulator BMI adalah alat untuk mengidentifikasi apakah 
-                berat badan kamu termasuk dalam kategori ideal atau tidak. 
-                Kalkulator ini dapat digunakan oleh seseorang yang berusia 
-                20 tahun ke atas.</p>
-                <h2>Hal yang perlu diperhatikan pada Kalkulator BMI:</h2>
-                <ul>
-                    <li>BMI Normal berada pada kisaran 17-25</li>
-                    <li>Jika angka BMI melebihi 25, maka kamu memiliki 
-                    berat badan berlebih</li>
-                    <li>Jika angka BMI berada di bawah 17, maka kamu memiliki 
-                    berat badan rendah</li>
-                    <li>Jika angka BMI sudah melebihi angka 27, sebaiknya 
-                    segera dilakukan penanganan untuk mencegah timbulnya 
-                    penyakit</li>
-                </ul>
-            </div>
-            
-        </main>
-        <!--laman hasil-->
-        <span class="result">
-            <h2>Hasil</h2>
-            <div class="card">
-                <h1 id="bmi-number">0.00</h1>
-            </div>
-        </span>
+                        <!--usia-->
+                        <div class="form-group">
+                            <label for="usia">Usia (Tahun)</label>
+                            <div class="icon-input">
+                                <i class="fa-solid fa-pen"></i>
+                                <input type="text" name="usia" 
+                                id="usia" class="input-text" 
+                                required="true" />
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button id="hitung" type="submit" class="button"
+                            onclick="calculate()">Hitung BMI</button>
+                            <button id="reset" class="reset">Reset</button>
+                        </div>
+                        <!-- validasi -->
+                        <div id="alert">
+                            <p id="alert-text">kandj</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="paragraph">
+                    <h2>Apa itu Kalkulator BMI? </h2>
+                    <p>Kalkulator BMI adalah alat untuk mengidentifikasi apakah 
+                    berat badan kamu termasuk dalam kategori ideal atau tidak. 
+                    Kalkulator ini dapat digunakan oleh seseorang yang berusia 
+                    20 tahun ke atas.</p>
+                    <h2>Hal yang perlu diperhatikan pada Kalkulator BMI:</h2>
+                    <ul>
+                        <li>BMI Normal berada pada kisaran 17-25</li>
+                        <li>Jika angka BMI melebihi 25, maka kamu memiliki 
+                        berat badan berlebih</li>
+                        <li>Jika angka BMI berada di bawah 17, maka kamu memiliki 
+                        berat badan rendah</li>
+                        <li>Jika angka BMI sudah melebihi angka 27, sebaiknya 
+                        segera dilakukan penanganan untuk mencegah timbulnya 
+                        penyakit</li>
+                    </ul>
+                </div>
+            </main>
+            <!--laman hasil-->
+            <span class="result">
+                <h2>Hasil</h2>
+                <div class="card">
+                    <h1 id="bmi-number">0.00</h1>
+                </div>
+            </span>
+        </div>
     </body>
 </html>
